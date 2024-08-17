@@ -1,0 +1,20 @@
+spring:
+  datasource:
+    url: jdbc:h2:tcp://localhost/~/Desktop/study/kimyounghan/H2/jpashop # MVCC=TRUE 권장
+    # H2 데이터베이스의 MVCC 옵션은 H2 1.4.198 버전부터 제거, 최신 버전에서는 MVCC 옵션을 사용하면 오류가 발생
+    username: sa
+    password:
+    driver-class-name: org.h2.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: create # 애플리케이션 실행 시점에 테이블을 drop 하고, 다시 생성
+    properties:
+      hibernate:
+        # show_sql: true # system.out을 통해 sql 보여줌
+        format_sql: true
+
+logging:
+  level:
+    org.hibernate.SQL: debug # 로거를 통해 sql 보여줌, show_sql 보다 더 좋은 방식
+    # org.hibernate.orm.jdbc.bind: trace # 스프링 부트 3.x, hibernate6, 쿼리 파라미터 값
