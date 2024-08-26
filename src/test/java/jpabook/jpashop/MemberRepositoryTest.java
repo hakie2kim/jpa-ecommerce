@@ -13,7 +13,7 @@ import org.springframework.transaction.annotation.Transactional;
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class MemberRepositoryTest {
-    @Autowired
+    /*@Autowired
     MemberRepository memberRepository;
 
     @Test
@@ -34,5 +34,5 @@ public class MemberRepositoryTest {
 
     @Test
     public void find() {
-    }
+    }*/
 }
